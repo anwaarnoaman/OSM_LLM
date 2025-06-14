@@ -1,0 +1,15 @@
+psycopg2-binary
+streamlit
+geopandas 
+folium 
+ipywidgets
+sqlalchemy
+pydantic
+langchain
+langchain_core
+langchain_ollama
+osm2geojson
+# sudo apt install flatpak
+# sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# sudo flatpak install flathub org.qgis.qgis
+# flatpak run org.qgis.qgis

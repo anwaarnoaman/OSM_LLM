@@ -1,0 +1,19 @@
+services:
+  postgis:
+    image: postgis/postgis:15-3.3
+    container_name: osm-postgis
+    environment:
+      POSTGRES_DB: osm
+      POSTGRES_USER: osmuser
+      POSTGRES_PASSWORD: N123456n
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U osmuser -d osm"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: always
