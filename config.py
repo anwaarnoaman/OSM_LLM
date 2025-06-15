@@ -16,7 +16,10 @@ llama3_2_3B = ModelConfig("llama3.2:3b", temperature=0.01, provider=ModelProvide
 devstral_24B = ModelConfig("devstral:24b", temperature=0.01, provider=ModelProvider.OLLAMA)
  
 gemma3_12B = ModelConfig("gemma3:12b", temperature=0.01, provider=ModelProvider.OLLAMA)
- 
+
+deepseek_R1_14b= ModelConfig("deepseek-r1:14b", temperature=0.01, provider=ModelProvider.OLLAMA)
+
+
 class Config:
     SEED = 42
     MODEL = gemma3_12B
